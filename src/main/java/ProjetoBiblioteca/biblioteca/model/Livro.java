@@ -4,6 +4,8 @@ public class Livro {
     private String titulo;
     private String autor;
     private String isbn;
+    private String categoria;
+    private boolean disponivel;
 
     public String getTitulo() {
         return titulo;
@@ -27,5 +29,21 @@ public class Livro {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }
