@@ -3,7 +3,7 @@ package ProjetoBiblioteca.biblioteca.model;
 public class Autor {
     private String nome;
     private String nacionalidade;
-    private String obrasPublicadas;
+    private Integer obrasPublicadas;
 
     public String getNome() {
         return nome;
@@ -21,11 +21,11 @@ public class Autor {
         this.nacionalidade = nacionalidade;
     }
 
-    public String getObrasPublicadas() {
+    public Integer getObrasPublicadas() {
         return obrasPublicadas;
     }
 
-    public void setObrasPublicadas(String obrasPublicadas) {
+    public void setObrasPublicadas(Integer obrasPublicadas) {
         this.obrasPublicadas = obrasPublicadas;
     }
 }

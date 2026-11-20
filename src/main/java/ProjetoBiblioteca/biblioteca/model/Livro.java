@@ -2,7 +2,7 @@ package ProjetoBiblioteca.biblioteca.model;
 
 public class Livro {
     private String titulo;
-    private String autor;
+    private Autor autor;
     private String isbn;
     private String categoria;
     private boolean disponivel;
@@ -15,11 +15,11 @@ public class Livro {
         this.titulo = titulo;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 

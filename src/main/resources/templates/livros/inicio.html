@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>Bem-vindo ao Sistema de Biblioteca</h1>
+
 <nav>
     <ul>
         <li><a th:href="@{/livros}">Livros</a></li>
@@ -16,5 +17,41 @@
         <li><a th:href="@{/emprestimos}">Empréstimos</a></li>
     </ul>
 </nav>
+
+<hr>
+
+<h2>Cadastrar Livro</h2>
+<form th:action="@{/livros}" th:object="${livro}" method="post">
+    <div>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" th:field="*{titulo}" required>
+    </div>
+
+    <div>
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" th:field="*{isbn}">
+    </div>
+
+    <!-- Aqui você pode expandir depois para autor/categoria conforme os atributos da sua classe Livro -->
+    <button type="submit">Salvar</button>
+</form>
+
+<hr>
+
+<h2>Livros Cadastrados</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Título</th>
+        <th>ISBN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${livros}">
+        <td th:text="${item.titulo}"></td>
+        <td th:text="${item.isbn}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
